@@ -1,62 +1,109 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Language" content="zh-cn">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>birdy</title>
-<style fprolloverstyle>A:hover {color: #000000; font-family: Tahoma; font-size: 8pt; font-weight: bold}
-</style>
-<STYLE type=text/css>
-/*¹ö¶¯ÌõÕûÌå*/
-::-webkit-scrollbar{
-    width:14px; /*¹ö¶¯Ìõ¿í¶È*/
-}
-/*¹ö¶¯Ìõ°´Å¥*/
-::-webkit-scrollbar-button {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birdy</title>
+    <style>
+        /* å…¨å±€å­—ä½“ä¼˜åŒ–ï¼ˆä»…ä¿®æ”¹æ­¤å¤„ï¼‰ */
+        body {
+            font-size: 16px; /* åŸºå‡†å¤§å° */
+        }
+        @media (max-width: 768px) {
+            body { font-size: 14px; } /* å¹³æ¿ */
+        }
+        @media (max-width: 480px) {
+            body { font-size: 12px; } /* æ‰‹æœº */
+        }
 
-}
-::-webkit-scrollbar-track{
-    background-color:#000000;  /*»¬µÀÈ«²¿*/
-}
-::-webkit-scrollbar-track-piece{
-    background-color:#000000;  /*»¬µÀ*/
-    -webkit-border-radius:4px; /*»¬µÀÔ²½Ç¿í¶È*/
-}
-::-webkit-scrollbar-thumb{
-    background-color:#181818; /*»¬¶¯Ìõ±íÃæ*/
-    border:solid 1px #000000; /*»¬¶¯Ìõ±ß¿ò*/
-    border-radius:4px;  /*»¬¶¯ÌõÔ²½Ç¿í¶È*/
-}
-/*ºáÊú¹ö¶¯Ìõ½»½Ç*/
-::-webkit-scrollbar-corner {
-    background-color: #000000;
-}
-/*ºáÊú¹ö¶¯Ìõ½»½ÇÍ¼°¸*/
-::-webkit-resizer {
-    /*background-image: url(/public/img/resizer-inactive.png);*/
-    background-repeat: no-repeat;
-    background-position: bottom right;
-}
-/*Êó±ê»¬¹ı»¬¶¯Ìõ*/
-::-webkit-scrollbar-thumb:hover{
-    background-color:#181818;
-}
-</STYLE>
+        /* å®Œå…¨ä¿ç•™åŸå§‹ç»“æ„æ ·å¼ */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #666;
+            font-family: Tahoma, sans-serif;
+        }
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #000;
+            font-weight: bold;
+        }
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #181818;
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #181818;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .content-frame {
+            width: 650px;
+            height: 800px;
+            border: none;
+        }
+        .sidebar {
+            width: 245px;
+            padding-left: 10px;
+            border-left: 1px solid #181818;
+        }
+        .year-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+        }
+    </style>
 </head>
-
-<body text="#666666" bgcolor="#000000" link="#666666" vlink="#666666" alink="#666666" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0">
-
-<table border="0" cellspacing="0" cellpadding="0" width="621">
-	<tr>
-		<td valign="top"><font face="Tahoma" style="font-size: 9pt">
-		<br><br>2019/8/11
-		<br><br><br>ÀäÄ®ĞéÎ±¡£
-    <br>Õâ¸öÊÀ½çÌ«ÌÖÑáÁË¡£ÏûÊ§°É¡£
-		
-¡¡</font></td>
-	</tr>
-</table>
-
+<body>
+    <!-- å®Œå…¨ä¿ç•™åŸå§‹ç»“æ„ -->
+    <div class="container">
+        <iframe 
+            name="mainFrame" 
+            src="birdy.html" 
+            class="content-frame"
+            title="ä¸»å†…å®¹åŒºåŸŸ">
+            æ‚¨çš„æµè§ˆå™¨ä¸æ”¯æŒiframeï¼Œè¯·å‡çº§æµè§ˆå™¨ã€‚
+        </iframe>
+        
+        <div class="sidebar">
+            <h1 class="year-title">2020</h1>
+            
+            <p>
+                <b>
+                    <a href="http://gb.bluemask.net/?id=586" target="mainFrame">GUESTBOOK</a><br>
+                    <a href="http://github.com" target="_blank">github</a>
+                </b>
+            </p>
+            
+            <p>
+                <b>ARCHIVE</b><br>
+                
+                <br>2019<br>
+                Feb. <a href="2019/0203.html" target="mainFrame">3</a>
+                
+                <br><br>2018<br>
+                Dec. <a href="2018/1221.html" target="mainFrame">21</a>
+                
+                <br><br>2017<br>
+                Mar. <a href="2017/0326.html" target="mainFrame">26</a>
+            </p>
+            
+            <script src="https://js.users.51.la/2977283.js"></script>
+        </div>
+    </div>
 </body>
-
 </html>

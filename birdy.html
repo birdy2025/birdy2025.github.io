@@ -1,62 +1,112 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 
 <head>
-<meta http-equiv="Content-Language" content="zh-cn">
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>birdy</title>
-<style fprolloverstyle>A:hover {color: #000000; font-family: Tahoma; font-size: 8pt; font-weight: bold}
-</style>
-<STYLE type=text/css>
-/*¹ö¶¯ÌõÕûÌå*/
-::-webkit-scrollbar{
-    width:14px; /*¹ö¶¯Ìõ¿í¶È*/
-}
-/*¹ö¶¯Ìõ°´Å¥*/
-::-webkit-scrollbar-button {
-
-}
-::-webkit-scrollbar-track{
-    background-color:#000000;  /*»¬µÀÈ«²¿*/
-}
-::-webkit-scrollbar-track-piece{
-    background-color:#000000;  /*»¬µÀ*/
-    -webkit-border-radius:4px; /*»¬µÀÔ²½Ç¿í¶È*/
-}
-::-webkit-scrollbar-thumb{
-    background-color:#181818; /*»¬¶¯Ìõ±íÃæ*/
-    border:solid 1px #000000; /*»¬¶¯Ìõ±ß¿ò*/
-    border-radius:4px;  /*»¬¶¯ÌõÔ²½Ç¿í¶È*/
-}
-/*ºáÊú¹ö¶¯Ìõ½»½Ç*/
-::-webkit-scrollbar-corner {
-    background-color: #000000;
-}
-/*ºáÊú¹ö¶¯Ìõ½»½ÇÍ¼°¸*/
-::-webkit-resizer {
-    /*background-image: url(/public/img/resizer-inactive.png);*/
-    background-repeat: no-repeat;
-    background-position: bottom right;
-}
-/*Êó±ê»¬¹ı»¬¶¯Ìõ*/
-::-webkit-scrollbar-thumb:hover{
-    background-color:#181818;
-}
-</STYLE>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>birdy</title>
+    <style>
+        /* å…¨å±€è®¾ç½® */
+        :root {
+            font-size: 16px; /* åŸºå‡†å­—ä½“å¤§å° */
+        }
+        
+        /* åŸºç¡€æ ·å¼ */
+        body {
+            font-family: Tahoma, "Microsoft YaHei", sans-serif;
+            font-size: 1rem; /* ä½¿ç”¨remå•ä½ */
+            color: #666666;
+            background-color: #000000;
+            margin: 0;
+            padding: 20px 0;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%; /* é˜²æ­¢iOSå­—ä½“è‡ªåŠ¨è°ƒæ•´ */
+        }
+        
+        /* å†…å®¹å®¹å™¨ */
+        .content {
+            width: 90%;
+            max-width: 621px;
+            margin: 0 auto;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        
+        /* é“¾æ¥æ ·å¼ */
+        a {
+            color: #666666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #000000;
+            font-weight: bold;
+        }
+        
+        /* è‡ªå®šä¹‰æ»šåŠ¨æ¡ - WebKitæµè§ˆå™¨ */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #181818;
+            border: 1px solid #000000;
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #222222;
+        }
+        
+        ::-webkit-scrollbar-corner {
+            background: #000000;
+        }
+        
+        /* å“åº”å¼è°ƒæ•´ */
+        @media screen and (max-width: 768px) {
+            :root {
+                font-size: 15px;
+            }
+            
+            .content {
+                width: 95%;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            :root {
+                font-size: 14px;
+            }
+            
+            ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+        }
+        
+        /* æ‰“å°æ ·å¼ */
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+            }
+        }
+    </style>
 </head>
 
-<body text="#666666" bgcolor="#000000" link="#666666" vlink="#666666" alink="#666666" topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0">
-
-<table border="0" cellspacing="0" cellpadding="0" width="621">
-	<tr>
-		<td valign="top"><font face="Tahoma" style="font-size: 9pt">
-		<br><br>2019/8/11
-		<br><br><br>ÀäÄ®ĞéÎ±¡£
-    <br>Õâ¸öÊÀ½çÌ«ÌÖÑáÁË¡£ÏûÊ§°É¡£
-		
-¡¡</font></td>
-	</tr>
-</table>
-
+<body>
+    <div class="content">
+        <p>2025/5/2</p>
+        <br><br>
+        <p>æ°¸è¿œæ‰¾ä¸åˆ°çŠ¶å†µ</p>
+        <p></p>
+    </div>
 </body>
 
 </html>
