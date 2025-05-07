@@ -17,8 +17,8 @@
             font-size: 1rem;
             color: #666666;
             background-color: #000000;
-            margin: 0;       /* 确保 body 无 margin */
-            padding: 0;      /* 确保 body 无 padding */
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
             -webkit-text-size-adjust: 100%;
         }
@@ -27,8 +27,8 @@
         .content {
             width: 90%;
             max-width: 621px;
-            margin: 0 auto;  /* 仅左右 auto，上下 0 */
-            padding: 0;      /* 移除内边距 */
+            margin: 0 auto;
+            padding: 0;
             box-sizing: border-box;
         }
         
@@ -38,7 +38,24 @@
             padding: 0;
         }
         
-        /* 其余样式保持不变 */
+        /* 播放器样式 */
+        .player {
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 20px;
+            opacity: 0.01;
+            cursor: pointer;
+        }
+        
         a {
             color: #666666;
             text-decoration: none;
@@ -103,19 +120,19 @@
     </style>
 </head>
 <body>
-    <div class="content"><iframe 
-    frameborder="no" 
-    border="0" 
-    marginwidth="0" 
-    marginheight="0" 
-    width="1" 
-    height="1" 
-    src="https://music.163.com/outchain/player?type=2&id=1859874&auto=1&height=0"
-></iframe>
+    <div class="content">
+        <div class="player">
+            <iframe 
+                frameborder="no" 
+                border="0" 
+                marginwidth="0" 
+                marginheight="0" 
+                src="https://music.163.com/outchain/player?type=2&id=1859874&auto=1&height=0">
+            </iframe>
+        </div>
         <p>2025/5/8</p><br>
         <p>如果没有痛苦就好了。</p>
         <p></p>
-</div>
-   
+    </div>
 </body>
 </html>
