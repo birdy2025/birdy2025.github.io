@@ -6,35 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>birdy</title>
     <style>
-        /* 全局设置（保持不变） */
+        /* 全局设置 */
         :root {
             font-size: 16px;
         }
         
+        /* 基础样式（确保无任何间距） */
         body {
             font-family: Tahoma, "Microsoft YaHei", sans-serif;
             font-size: 1rem;
             color: #666666;
             background-color: #000000;
-            margin: 0;
-            padding: 0;
+            margin: 0;       /* 确保 body 无 margin */
+            padding: 0;      /* 确保 body 无 padding */
             line-height: 1.6;
             -webkit-text-size-adjust: 100%;
         }
         
+        /* 内容容器（移除所有可能的间距） */
         .content {
             width: 90%;
             max-width: 621px;
-            margin: 0 auto;
-            padding: 0;
+            margin: 0 auto;  /* 仅左右 auto，上下 0 */
+            padding: 0;      /* 移除内边距 */
             box-sizing: border-box;
         }
         
+        /* 确保 <p> 标签无默认 margin */
         p {
             margin: 0;
             padding: 0;
         }
         
+        /* 图片缩放样式 */
+        .scalable-image {
+            width: 610px;
+            height: auto;
+            max-width: 1080px;  /* 原始宽度 */
+            min-width: 305px;  /* 50%缩放 */
+            cursor: zoom-in;
+            transition: width 0.3s ease;
+        }
+        
+        .scalable-image.zoomed {
+            width: 1080px;
+            cursor: zoom-out;
+        }
+        
+        /* 其余样式保持不变 */
         a {
             color: #666666;
             text-decoration: none;
@@ -68,16 +87,7 @@
         ::-webkit-scrollbar-corner {
             background: #000000;
         }
-
-        /* 仅修改图片样式 */
-        img {
-            width: 100%;          /* 默认宽度撑满容器 */
-            max-width: 610px;     /* 最大宽度限制为610px */
-            height: auto;         /* 高度自动等比缩放 */
-            display: block;
-            touch-action: pinch-zoom; /* 允许双指缩放 */
-        }
-
+        
         @media screen and (max-width: 768px) {
             :root {
                 font-size: 15px;
@@ -85,6 +95,15 @@
             
             .content {
                 width: 95%;
+            }
+            
+            .scalable-image {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .scalable-image.zoomed {
+                width: 100%;
             }
         }
         
@@ -113,11 +132,18 @@
         <br>
         <p><img 
             src="1221.png" 
-            alt="line" 
-            width="610" 
-            height="auto" 
-            style="max-width: 100%;"
+            alt="示例图片" 
+            class="scalable-image"
+            onclick="this.classList.toggle('zoomed')"
         ></p>
     </div>
+    
+    <script>
+        // 确保在移动设备上也能正常缩放
+        document.querySelector('.scalable-image').addEventListener('touchstart', function(e) {
+            this.classList.toggle('zoomed');
+            e.preventDefault();
+        });
+    </script>
 </body>
 </html>
