@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>birdy</title>
+    <style>
+        /* 全局设置 */
+        :root {
+            font-size: 16px;
+        }
+        
+        /* 基础样式（确保无任何间距） */
+        body {
+            font-family: Tahoma, "Microsoft YaHei", sans-serif;
+            font-size: 1rem;
+            color: #666666;
+            background-color: #000000;
+            margin: 0;       /* 确保 body 无 margin */
+            padding: 0;      /* 确保 body 无 padding */
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        /* 内容容器（移除所有可能的间距） */
+        .content {
+            width: 90%;
+            max-width: 621px;
+            margin: 0 auto;  /* 仅左右 auto，上下 0 */
+            padding: 0;      /* 移除内边距 */
+            box-sizing: border-box;
+        }
+        
+        /* 确保 <p> 标签无默认 margin */
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* 其余样式保持不变 */
+        a {
+            color: #666666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #000000;
+            font-weight: bold;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #181818;
+            border: 1px solid #000000;
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #222222;
+        }
+        
+        ::-webkit-scrollbar-corner {
+            background: #000000;
+        }
+        
+        @media screen and (max-width: 768px) {
+            :root {
+                font-size: 15px;
+            }
+            
+            .content {
+                width: 95%;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            :root {
+                font-size: 14px;
+            }
+            
+            ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>2018/12/21</p>
+        <br>
+        <p><img src="1221.png" alt="回溯" width="600" height="400"></p>
+        <p></p>
+    </div>
+</body>
+</html>
