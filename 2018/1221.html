@@ -38,21 +38,6 @@
             padding: 0;
         }
         
-        /* 图片缩放样式 */
-        .scalable-image {
-            width: 610px;
-            height: auto;
-            max-width: 1080px;  /* 原始宽度 */
-            min-width: 305px;  /* 50%缩放 */
-            cursor: zoom-in;
-            transition: width 0.3s ease;
-        }
-        
-        .scalable-image.zoomed {
-            width: 1080px;
-            cursor: zoom-out;
-        }
-        
         /* 其余样式保持不变 */
         a {
             color: #666666;
@@ -96,15 +81,6 @@
             .content {
                 width: 95%;
             }
-            
-            .scalable-image {
-                width: 100%;
-                max-width: 100%;
-            }
-            
-            .scalable-image.zoomed {
-                width: 100%;
-            }
         }
         
         @media screen and (max-width: 480px) {
@@ -131,19 +107,12 @@
         <p>2018/12/21</p>
         <br>
         <p><img 
-            src="1221.png" 
-            alt="示例图片" 
-            class="scalable-image"
-            onclick="this.classList.toggle('zoomed')"
-        ></p>
+    src="1221.png" 
+    alt="示例图片" 
+    width="610" 
+    height="auto" 
+    style="max-width: 100%;"
+>   <p></p>
     </div>
-    
-    <script>
-        // 确保在移动设备上也能正常缩放
-        document.querySelector('.scalable-image').addEventListener('touchstart', function(e) {
-            this.classList.toggle('zoomed');
-            e.preventDefault();
-        });
-    </script>
 </body>
 </html>
