@@ -5,25 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>birdy</title>
     <style>
-        /* 全局字体优化（仅修改此处） */
-        body {
-            font-size: 16px; /* 基准大小 */
-        }
-        @media (max-width: 768px) {
-            body { font-size: 14px; } /* 平板 */
-        }
-        @media (max-width: 480px) {
-            body { font-size: 12px; } /* 手机 */
-        }
-
-        /* 完全保留原始结构样式 */
-        body {
+        /* 强制全屏的关键CSS */
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* 隐藏滚动条 */
             margin: 0;
             padding: 0;
+        }
+        
+        /* 全局字体优化 */
+        body {
+            font-size: 16px;
             background: #000;
             color: #666;
             font-family: Tahoma, sans-serif;
         }
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+        }
+        @media (max-width: 480px) {
+            body { font-size: 12px; }
+        }
+
+        /* 容器全屏布局 */
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* 内容框架调整 */
+        .content-frame {
+            flex: 1;
+            height: 100%;
+            border: none;
+        }
+        
+        /* 侧边栏调整 */
+        .sidebar {
+            width: 220px;
+            height: 100%;
+            padding-left: 10px;
+            border-left: 1px solid #181818;
+            overflow-y: auto; /* 允许侧边栏单独滚动 */
+        }
+
+        /* 其他保留样式 */
         a {
             color: #666;
             text-decoration: none;
@@ -46,30 +76,14 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #181818;
         }
-        .container {
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-        }
-        .content-frame {
-            width: 675px;  /* 从650px增加到675px */
-            height: 800px;
-            border: none;
-        }
-        .sidebar {
-            width: 220px;  /* 从245px减少到220px */
-            padding-left: 10px;
-            border-left: 1px solid #181818;
-        }
         .year-title {
-            font-size: 36px;  /* 从48px减小到40px */
+            font-size: 36px;
             font-weight: bold;
             margin: 0;
         }
     </style>
 </head>
 <body>
-    <!-- 完全保留原始结构 -->
     <div class="container">
         <iframe 
             name="mainFrame" 
@@ -85,14 +99,15 @@
             <p>
                 <b>
                     <a href="http://gb.bluemask.net/?id=586" target="mainFrame">GUESTBOOK</a><br>
-                    <a href="http://github.com" target="_blank">github</a>
+                    <a href="http://github.com" target="_blank">GITHUB</a>
                 </b>
             </p>
             
             <p>
-                
                 <br>2019<br>
                 Feb. <a href="2019/0203.html" target="mainFrame">3</a>
+                <br>
+                Aug. <a href="2019/0811.html" target="mainFrame">11</a>
                 
                 <br><br>2018<br>
                 Dec. <a href="2018/1221.html" target="mainFrame">21</a>

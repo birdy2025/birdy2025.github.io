@@ -8,31 +8,37 @@
     <style>
         /* 全局设置 */
         :root {
-            font-size: 16px; /* 基准字体大小 */
+            font-size: 16px;
         }
         
-        /* 基础样式 */
+        /* 基础样式（确保无任何间距） */
         body {
             font-family: Tahoma, "Microsoft YaHei", sans-serif;
-            font-size: 1rem; /* 使用rem单位 */
+            font-size: 1rem;
             color: #666666;
             background-color: #000000;
-            margin: 0;
-            padding: 20px 0;
+            margin: 0;       /* 确保 body 无 margin */
+            padding: 0;      /* 确保 body 无 padding */
             line-height: 1.6;
-            -webkit-text-size-adjust: 100%; /* 防止iOS字体自动调整 */
+            -webkit-text-size-adjust: 100%;
         }
         
-        /* 内容容器 */
+        /* 内容容器（移除所有可能的间距） */
         .content {
             width: 90%;
             max-width: 621px;
-            margin: 0 auto;
-            padding: 0 10px;
+            margin: 0 auto;  /* 仅左右 auto，上下 0 */
+            padding: 0;      /* 移除内边距 */
             box-sizing: border-box;
         }
         
-        /* 链接样式 */
+        /* 确保 <p> 标签无默认 margin */
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* 其余样式保持不变 */
         a {
             color: #666666;
             text-decoration: none;
@@ -44,7 +50,6 @@
             font-weight: bold;
         }
         
-        /* 自定义滚动条 - WebKit浏览器 */
         ::-webkit-scrollbar {
             width: 12px;
             height: 12px;
@@ -68,7 +73,6 @@
             background: #000000;
         }
         
-        /* 响应式调整 */
         @media screen and (max-width: 768px) {
             :root {
                 font-size: 15px;
@@ -90,7 +94,6 @@
             }
         }
         
-        /* 打印样式 */
         @media print {
             body {
                 background-color: white;
@@ -99,14 +102,11 @@
         }
     </style>
 </head>
-
 <body>
     <div class="content">
-        <p>2025/5/2</p>
-        <br><br>
-        <p>永远找不到状况</p>
+        <p>2025/5/8</p><br>
+        <p>如果没有痛苦就好了。</p>
         <p></p>
     </div>
 </body>
-
 </html>
