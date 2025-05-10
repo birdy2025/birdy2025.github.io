@@ -81,31 +81,13 @@
             font-weight: bold;
             margin: 0;
         }
-        
-        /* 全屏按钮样式 */
-        #fullscreen-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #181818;
-            color: #666;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            z-index: 1000;
-        }
-        #fullscreen-btn:hover {
-            background: #333;
-            color: #fff;
-        }
     </style>
 </head>
 <body>
-    <div class="container" id="container">
+    <div class="container">
         <iframe 
             name="mainFrame" 
-            src="birdy.html" 
+            src="2025/0510.html" 
             class="content-frame"
             title="主内容区域">
             您的浏览器不支持iframe，请升级浏览器。
@@ -137,54 +119,5 @@
             <script src="https://js.users.51.la/2977283.js"></script>
         </div>
     </div>
-    
-    <button id="fullscreen-btn">全屏</button>
-    
-    <script>
-        // 全屏功能实现
-        const fullscreenBtn = document.getElementById('fullscreen-btn');
-        const container = document.getElementById('container');
-        
-        fullscreenBtn.addEventListener('click', toggleFullscreen);
-        
-        function toggleFullscreen() {
-            if (!document.fullscreenElement) {
-                // 进入全屏
-                if (container.requestFullscreen) {
-                    container.requestFullscreen();
-                } else if (container.webkitRequestFullscreen) { /* Safari */
-                    container.webkitRequestFullscreen();
-                } else if (container.msRequestFullscreen) { /* IE11 */
-                    container.msRequestFullscreen();
-                }
-                fullscreenBtn.textContent = '退出全屏';
-            } else {
-                // 退出全屏
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) { /* Safari */
-                    document.webkitExitFullscreen();
-                } else if (document.msExitFullscreen) { /* IE11 */
-                    document.msExitFullscreen();
-                }
-                fullscreenBtn.textContent = '全屏';
-            }
-        }
-        
-        // 监听全屏状态变化
-        document.addEventListener('fullscreenchange', updateFullscreenButton);
-        document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
-        document.addEventListener('msfullscreenchange', updateFullscreenButton);
-        
-        function updateFullscreenButton() {
-            if (document.fullscreenElement || 
-                document.webkitFullscreenElement || 
-                document.msFullscreenElement) {
-                fullscreenBtn.textContent = '退出全屏';
-            } else {
-                fullscreenBtn.textContent = '全屏';
-            }
-        }
-    </script>
 </body>
 </html>
